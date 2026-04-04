@@ -16,21 +16,20 @@
             <nav class="nav-menu">
                 <ul class="menu-items">
                     <li class="menu-item"><a href="#">Início</a></li>
-                    <li class="menu-item"><a href="#">Cardápio</a></li>
+                    <li class="menu-item"><a href="menu.html">Cardápio</a></li>
                 </ul>
             </nav>
             <button class="cart-btn">
-                <div class="cart-icon">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
+                <i class="fa-solid fa-cart-shopping"></i>
             </button>
         </div>
     </header>
+    <dialog data-modal="cart"></dialog>
     <main>
         <section class="hero">
             <div class="hero-content">
                 <div class="hero-text">
-                    <img src="src/images/hero-content.svg" alt="">
+                    <img src="src/images/titulos/hero-content.svg" alt="">
                 </div>
                 <div class="action-btn">
                     <a href="#reservation">FAZER RESERVA</a>
@@ -41,10 +40,64 @@
                 </div>
         </section>
         <section class="features">
-            <img src="src/images/mask.svg" width="100%" alt="" class="features-background">
+            <div class="features-content">
+               <div class="feature">
+                <h4 class="feature-tittle">Feature A</h4>
+                <p class="feature-text">feature a</p>
+               </div>
+               <div class="feature">
+                <h4 class="feature-tittle">Feature B</h4>
+                <p class="feature-text">feature a</p>
+               </div>
+               <div class="feature">
+                <h4 class="feature-tittle">Feature C</h4>
+                <p class="feature-text">feature a</p>
+               </div>
+               <div class="feature">
+                <h4 class="feature-tittle">Feature D</h4>
+                <p class="feature-text">feature a</p>
+               </div>
+            </div>
         </section>
-        <section class="products"></section>
-        <section class="reservation" id="reservation"></section>
+        <section class="products">
+            <h1>
+                <img src="src/images/titulos/Mais Pedidos.svg" alt="">
+            </h1>
+            <div class="products-container" id="products-container" data-limit="3"></div>
+        </section>
+        <section class="reservation" id="reservation">
+            <h1>
+                <img src="src/images/titulos/reserva.svg" alt="">
+            </h1>
+            <p>Garanta sua mesa e aproveite  o valor promocional!</p>
+            <form action="" method="post">
+                <div class="input-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome">
+                </div>
+                <div class="input-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone" placeholder="(11) 99999-9999">
+                </div>
+                <div class="input-group">
+                    <label for="data">Data</label>
+                    <input type="date" name="data" id="data">
+                </div>
+                <div class="input-group">
+                    <label for="hora">Horário</label>
+                    <input type="time" min="11:00" max="21:00" name="hora" id="hora" placeholder="">
+                </div>
+                <div class="input-group">
+                    <label for="num-pessoas">Número de pessoas</label>
+                    <input type="number" min="1" max="6" name="num-pessoas" id="num-pessoas" placeholder="Selecione" required>
+                </div>
+                <div class="input-group">
+                    <label for="obs">Observações</label>
+                    <input type="text" name="obs" id="obs" placeholder="Preferências, alergias, etc.">
+                </div>
+                <button class="btn-reservar" type="submit">Confirmar Reserva</button>
+            </form>
+        </section>
     </main>
     <footer>
         <div class="footer-content">

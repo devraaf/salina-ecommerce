@@ -1,0 +1,58 @@
+[
+    {
+      "id": 1,
+      "categoria": "entrada",
+      "nome": "Camarões à Provençal",
+      "preco": 64.90,
+      "descricao": "Camarões médios salteados na manteiga com alho, azeite de oliva, salsinha fresca e toque de limão siciliano. Acompanha pão artesanal tostado.",
+      "imagem": "src/images/products/camaroes.png"
+    },
+    {
+      "id": 2,
+      "categoria": "entrada",
+      "nome": "Bolinho de Bacalhau",
+      "preco": 49.90,
+      "descricao": "Bolinhos crocantes preparados com bacalhau desfiado, batata, cebola, alho e salsinha. Servidos com molho tártaro.",
+      "imagem": "src/images/products/bolinho.png"
+    },
+    {
+      "id": 3,
+      "categoria": "prato_principal",
+      "nome": "Camarão na Moranga",
+      "preco": 169.90,
+      "descricao": "Moranga assada recheada com camarões em molho cremoso feito com alho, cebola, tomate, creme de leite e requeijão. Acompanha arroz branco.",
+      "imagem": "src/images/products/moranga.png"
+    },
+    {
+      "id": 4,
+      "categoria": "prato_principal",
+      "nome": "Espaguete com Camarões ao Alho e Óleo",
+      "preco": 79.90,
+      "descricao": "Espaguete salteado com camarões, alho dourado, azeite de oliva, pimenta calabresa e salsinha fresca. Finalizado com parmesão.",
+      "imagem": "src/images/products/macarrao.png"
+    },
+    {
+      "id": 5,
+      "categoria": "prato_principal",
+      "nome": "Filé de Salmão Grelhado",
+      "preco": 92.90,
+      "descricao": "Filé de salmão grelhado com manteiga de ervas, acompanhado de legumes salteados e purê de batatas.",
+      "imagem": "src/images/products/salmao.png"
+    },
+    {
+      "id": 6,
+      "categoria": "bebida",
+      "nome": "Água Mineral",
+      "preco": 6.90,
+      "descricao": "Água mineral natural ou com gás.",
+      "imagem": "src/images/products/agua.png"
+    },
+    {
+      "id": 7,
+      "categoria": "bebida",
+      "nome": "Refrigerante",
+      "preco": 8.90,
+      "descricao": "Refrigerante em lata. Sabores: Cola, Guaraná ou Limão.",
+      "imagem": "src/images/products/refrigerante.png"
+    }
+]
