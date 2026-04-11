@@ -1,0 +1,59 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Ana Silva",
+      "email": "anasilva@gmail.com",
+      "avatar": "A",
+      "totalPedidos": 2,
+      "totalGasto": 550.00
+    },
+    {
+      "id": 2,
+      "nome": "Carlos Santos",
+      "email": "carlos.santos@email.com",
+      "avatar": "C",
+      "totalPedidos": 5,
+      "totalGasto": 750.50
+    },
+    {
+      "id": 3,
+      "nome": "Joaquim Mendes",
+      "email": "joaquim.mendes@email.com",
+      "avatar": "J",
+      "totalPedidos": 2,
+      "totalGasto": 520.00
+    },
+    {
+      "id": 4,
+      "nome": "João Costa",
+      "email": "joao.costa@email.com",
+      "avatar": "J",
+      "totalPedidos": 4,
+      "totalGasto": 520.00
+    }
+  ],
+  "pedidos": [
+    {
+      "id": "#11356",
+      "cliente": "Ana Silva",
+      "data": "07/01/2026",
+      "pagamento": "Pago",
+      "total": 250.00
+    },
+    {
+      "id": "#11357",
+      "cliente": "Carlos Santos",
+      "data": "26/11/2026",
+      "pagamento": "Pendente",
+      "total": 180.00
+    },
+    {
+      "id": "#11358",
+      "cliente": "Ana Silva",
+      "data": "22/03/2026",
+      "pagamento": "Pago",
+      "total": 300.00
+    }
+  ]
+}
