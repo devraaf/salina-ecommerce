@@ -1,0 +1,232 @@
+@import url(styles.css);
+
+/* CABEÇALHO */
+header{
+    background: linear-gradient(90deg, var(--blue-dark) 0%, var(--blue-primary) 100%);
+    box-shadow: 0 4px 20px 0 rgba(19, 49, 157, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+.logo img{
+    width: 200px;
+}
+.nav-menu{
+    align-self: center;
+}
+.menu-items{
+    display: flex;
+    gap: 60px;
+    list-style: none;
+}
+.menu-item a{
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1em;
+}
+.cart-btn{
+    background-color: transparent;
+    border: none;
+    margin-right: 10%;
+}
+.cart-btn i{
+    font-size: 1.5em;
+    color: var(--white);
+}
+
+/* MODAL CARRINHO */
+dialog{
+    z-index: 2;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    box-shadow: -10px 0 40px 0 rgba(0, 0, 0, 0.20);
+    background-color: var(--white);
+    margin-left: auto;
+    height: 100%;
+    width: 400px;
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.header-cart{
+    background-color: var(--blue-primary);
+    color: var(--cream);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+}
+.header-cart h4{
+    font-size: 24px;
+    font-family: "Cinzel Decorative";
+}
+.close-cart, .header-cart i{
+    background: none;
+    border: none;
+    color: var(--cream);
+    font-size: 20px;
+}
+.cart-container{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 73%;
+}
+.empty-cart{
+    text-align: center;
+}
+.empty-cart i{
+    font-size: 80px;
+    color: var(--gray-light);
+    margin-top: 20px;
+}
+.empty-cart .title{
+    color: var(--gray-medium);
+    padding: 50px 0 0;
+    font-size: 1.25em;
+}
+.empty-cart p{
+    color: var(--gray-medium);
+    padding: 10px;
+}
+.footer-cart{
+    border-top: 2px solid var(--cream);
+    background: var(--off-white);
+    height: 150px;
+    text-align: center;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+    color: var(--blue-dark);
+    font-size: 20px;
+    font-weight: 700;
+}
+.footer-cart button{
+    background-color: var(--coral);
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 0.32px;
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    padding: 15px 80px;
+    text-align: center;
+}
+.product{
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.product img{
+    height: 100px;
+    width: auto;
+    border-radius: 10px;
+}
+.data-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.data-product .tittle{
+    color: var(--blue-dark);
+    font-family: "Cinzel Decorative";
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.data-product .price{
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--coral);
+}
+.data-product button{
+    background: none;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+.data-product .qtd-area, .data-product i{
+    font-size: 1em;
+    color: var(--navy);
+}
+.qtd-item{
+    padding: 10px;
+}
+
+/* TODOS EFEITOS DE HOVER DO CABEÇALHO + CARRINHO */
+.menu-item a:hover,.menu-item:hover, .cart-btn i:hover, .close-cart i:hover{
+    color: var(--coral);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.footer-cart button:hover{
+    box-shadow: 0 0 8px 2px #f78975;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.data-product button:hover{
+    background-color: var(--gray-light);
+    border: 1px solid var(--gray-medium);
+}
+.menu-item a, .menu-item a:hover, .menu-item, .menu-item:hover, .cart-btn i, .cart-btn i:hover, .close-cart i:hover, .footer-cart button, .footer-cart button:hover{
+    transition: 0.2s ease-in-out;
+}
+
+/* RODAPÉ */
+footer{
+    border-top: 7px solid var(--coral);
+    background-color: var(--navy);
+    padding: 2em;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    color: var(--cream);
+    margin: 0 50px;
+}
+.footer-logo img{
+    width: 150px;
+}
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    font-size: 0.9em;
+}
+.contact-item{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.contact-icon{
+    background-color: var(--cream);
+    color: var(--navy);
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    
+}
+.footer-bottom{
+    text-align: center;
+    opacity: 0.6;
+    color: var(--white);
+    font-weight: 400;
+    font-size: 0.8em;
+}
+.footer-bottom p{
+    padding: 20px;
+}

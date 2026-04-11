@@ -6,67 +6,26 @@
     font-family: 'Montserrat', sans-serif;
 }
 :root{
+    /* Cores Principais */
     --coral: #f65135;
     --blue-primary: #3242b8;
     --blue-secondary: #3946ae;
     --blue-dark: #13319d;
     --cream: #fff4e5;
     --navy: #35446d;
+     /* Neutros e Fundos */
     --white: #ffffff;
+    --off-white: #fafafa;   
+    --cream: #fff4e5;
+    /* Tons de Cinza */
+    --gray-light: #dddddd;  
+    --gray-medium: #b8b8b8; 
 }
 body{
     display: flex;
     flex-direction: column;
     background-color: var(--cream);
     min-height: 100vh;
-}
-header{
-    background: linear-gradient(90deg, var(--blue-dark) 0%, var(--blue-primary) 100%);
-    box-shadow: 0 4px 20px 0 rgba(19, 49, 157, 0.3);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-.header-content{
-    display: flex;
-    justify-content: space-between;
-    padding: 2em;
-}
-.logo img{
-    width: 200px;
-}
-.nav-menu{
-    align-self: center;
-}
-.menu-items{
-    display: flex;
-    gap: 60px;
-    list-style: none;
-}
-.menu-item a{
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 600;
-    font-size: 1em;
-}
-.cart-btn{
-    background-color: transparent;
-    border: none;
-    margin-right: 10%;
-}
-.cart-btn i{
-    font-size: 1.5em;
-    color: var(--white);
-}
-.menu-item a:hover,.menu-item:hover, .cart-btn i:hover{
-    color: var(--coral);
-    cursor: pointer;
-    transform: scale(1.1);
-}
-.menu-item a, .menu-item a:hover, .menu-item, .menu-item:hover, .cart-btn i, .cart-btn i:hover{
-    transition: transform 0.2s ease-in-out;
 }
 
 main{
@@ -86,7 +45,6 @@ main{
     flex-direction: column;
     justify-content: space-around;
 }
-
 .action-btn a{
     border: 3px solid var(--blue-dark);
     border-radius: 50px;
@@ -126,6 +84,8 @@ main{
     font-size: 1.25em;
     font-weight: 700;
 }
+
+/* CARDAPIO */
 .products{
     padding: 50px;
 }
@@ -150,11 +110,9 @@ main{
     background: var(--white);
     box-shadow: 0 10px 40px rgba(19, 49, 157, 0.10);
     padding: 5px;
-    transition: 0.2s;
 }
 .card:hover{
     transform: scale(1.03);
-    transition: 0.2s;
     border: 1px solid var(--coral);
 }
 .card img{
@@ -182,7 +140,7 @@ main{
     align-items: center;
 }
 .footer-card span{
-    color: #F65135;
+    color: var(--coral);
     font-size: 1.5em;
     font-weight: 700;
 }
@@ -194,15 +152,16 @@ main{
     color: var(--white);
     background-color: var(--blue-primary);
     text-align: center;
-    transition: 0.2s;
 }
-
 .btn-add-to-cart:hover{
     background-color: var(--coral);
     transform: scale(1.1);
-    transition: 0.2s;
+}
+.card, .card:hover, .btn-add-to-cart, .btn-add-to-cart:hover{
+     transition: transform 0.2s ease-in-out;
 }
 
+ /* FORMULARIO RESERVA */
 .reservation{
     background: url(../images/masks/mask-reserva.svg),
                 linear-gradient(180deg, var(--blue-primary) 0%, var(--blue-dark) 100%);
@@ -273,50 +232,4 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     border: none;
     text-transform: uppercase;
     padding: 12px;
-}
-
-
-footer{
-    border-top: 7px solid #F65135;
-    background-color: var(--navy);
-    padding: 2em;
-}
-.footer-content{
-    display: flex;
-    justify-content: space-between;
-    color: var(--cream);
-    margin: 0 50px;
-}
-.footer-logo img{
-    width: 150px;
-}
-.footer-contact{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px;
-    font-size: 0.9em;
-}
-.contact-item{
-    display: flex;
-    gap: 5px;
-    align-items: center;
-}
-.contact-icon{
-    background-color: var(--cream);
-    color: var(--navy);
-    padding: 5px;
-    border-radius: 20px;
-    text-align: center;
-    
-}
-.footer-bottom{
-    text-align: center;
-    opacity: 0.6;
-    color: var(--white);
-    font-weight: 400;
-    font-size: 0.8em;
-}
-.footer-bottom p{
-    padding: 20px;
 }

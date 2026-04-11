@@ -1,5 +1,3 @@
-const cart = []
-
 // função que carrega os produtos
 function load(limit){
     fetch('src/data/menu.json') //endereço da req
@@ -36,9 +34,7 @@ function load(limit){
                 btn.classList.add("btn-add-to-cart")
                 btn.innerHTML = '<i class="fa-solid fa-cart-plus"></i>'
                 btn.addEventListener('click', () => {
-                    cart.push(product.id)
-                    console.log(cart)
-                    alert(`${product.nome} adicionado ao carrinho!`)
+                    addToCart(product)
                 })
                 //estrutura os elementos criados
                 footer_card.appendChild(preco)
