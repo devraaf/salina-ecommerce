@@ -82,20 +82,24 @@
         <section class="features">
             <div class="features-content">
                <div class="feature">
-                <h4 class="feature-tittle">Feature A</h4>
-                <p class="feature-text">feature a</p>
+                <i class="fa-solid fa-shrimp"></i>
+                <h4 class="feature-tittle">Selo de frescor</h4>
+                <p class="feature-text">Inspeção rigorosa de cada lote recebido</p>
                </div>
                <div class="feature">
-                <h4 class="feature-tittle">Feature B</h4>
-                <p class="feature-text">feature a</p>
+                <i class="fa-solid fa-star"></i>
+                <h4 class="feature-tittle">5 Estrelas</h4>
+                <p class="feature-text">Avaliação máxima de nossos clientes</p>
                </div>
                <div class="feature">
-                <h4 class="feature-tittle">Feature C</h4>
-                <p class="feature-text">feature a</p>
+                <i class="fa-solid fa-truck"></i>
+                <h4 class="feature-tittle">Delivery Rápido</h4>
+                <p class="feature-text">Entregamos em até 45 minutos na sua casa</p>
                </div>
                <div class="feature">
-                <h4 class="feature-tittle">Feature D</h4>
-                <p class="feature-text">feature a</p>
+                <i class="fa-solid fa-utensils"></i>
+                <h4 class="feature-tittle">Reserva Fácil</h4>
+                <p class="feature-text">Reserve sua mesa online em segundos</p>
                </div>
             </div>
         </section>
@@ -113,22 +117,22 @@
             <form action="reservation.php" method="post">
                 <div class="input-group">
                     <label for="nome">Nome completo</label>
-                    <input type="text" name="nome" id="nome" placeholder="Seu nome">
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
                 </div>
                 <div class="input-group">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="(11) 99999-9999">
+                    <input type="tel" name="telefone" id="telefone" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" placeholder="(11) 99999-9999" required>
                 </div>
                 <div class="input-group">
                     <label for="data">Data</label>
-                    <input type="date" name="data" id="data">
+                    <input type="date" name="data" id="data" required>
                 </div>
                 <div class="input-group">
                     <label for="hora">Horário</label>
-                    <input type="time" min="11:00" max="21:00" name="hora" id="hora" placeholder="">
+                    <input type="time" min="11:00" max="21:00" name="hora" id="hora" required>
                 </div>
                 <div class="input-group">
-                    <label for="num-pessoas">Número de pessoas</label>
+                    <label for="num_pessoas">Número de pessoas</label>
                     <input type="number" min="1" max="6" name="num_pessoas" id="num_pessoas" placeholder="Selecione" required>
                 </div>
                 <div class="input-group">

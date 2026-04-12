@@ -20,13 +20,64 @@
 <body>
     <main>
         <section class="status">
-            <div class="box-infos">
-                <h1>Reserva Confirmada!</h1>
-                <p><strong><?php echo $nome; ?></strong>, sua reserva para o dia 
-                    <strong><?php echo $data; ?></strong> às 
-                    <strong><?php echo $hora; ?></strong> foi concluída com sucesso.
-                </p>
-                <p>Estamos preparando tudo para receber você!</p>
+            <span class="flag">Você economizou 30% reservando online!</span>
+            <div class="status-container">
+                <div class="top-status">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h1><img src="src/images/titulos/reserva-confirmada.svg" alt="reserva confirmada"></h1>
+                    <p>Sua mesa está garantida</p>
+                </div>
+                <div class="box box-infos">
+                    <div class="info">
+                        <div class="campo">
+                            <i class="fa-solid fa-user"></i>
+                            <p>Nome</p>
+                        </div>
+                        <p><strong><?php echo $nome; ?></strong></p>
+                    </div>
+                    <div class="info">
+                        <div class="campo">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <p>Data</p>
+                        </div>
+                        <p><strong><?php echo $data; ?></strong></p>
+                    </div>
+                    <div class="info">
+                        <div class="campo">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>Hora</p>
+                        </div>
+                        <p><strong><?php echo $hora; ?></strong></p>
+                    </div>
+                    <div class="info">
+                        <div class="campo">
+                            <i class="fa-solid fa-user-group"></i>
+                            <p>Pessoas</p>
+                        </div>
+                        <p><strong><?php echo $num_pessoas; ?></strong></p>
+                    </div>
+                    <div class="info">
+                        <div class="campo">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Local</p>
+                        </div>
+                        <p><strong>Estrada das Ostras, 90</strong></p>
+                    </div>
+                </div>
+                <div class="box box-rebate">
+                    <p>Você ganhou <strong>30% de desconto</strong> em toda a conta por reservar com antecedência pelo nosso site.</p>
+                    <p>Apresente este código ao chegar:</p>
+                    <span>SALINA30-0001</span>
+                </div>
+                
+                <div class="final-area">
+                    <h3>Estamos preparando tudo para receber você!</h3>
+                    <p>Você receberá um lembrete 2 horas antes da sua reserva.</p>
+                    <div class="btn-area">
+                        <a href="menu.html" class="menu">Ver cardápio</a>
+                        <a href="index.html" class="index">Voltar ao início</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

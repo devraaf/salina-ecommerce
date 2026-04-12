@@ -1,1 +1,158 @@
-@import url(styles.css);
+@import url(styles.css); 
+
+:root{
+    --green: #2A9931;
+}
+main{
+    background: url(../images/masks/mask-status-reserva.svg),
+                linear-gradient(180deg, #13319D 0%, #35446D 100%);
+    padding: 50px;
+}
+.status{
+    align-self: center;
+    width: 549px;
+    height: 965px;
+}
+.status-container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 20px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background: var(--cream);
+    box-shadow: 0 25px 80px 0 rgba(0, 0, 0, 0.30);
+    gap: 20px;
+    padding: 30px 40px;
+}
+.flag{
+    display: flex;
+    background-color: var(--coral);
+    padding: 15px;
+    color: var(--cream);
+    font-size: 0.90em;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    justify-content: center;
+}
+.top-status{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.top-status i{
+    font-size: 3em;
+    color: var(--green);
+}
+.top-status p{
+    color: var(--blue-dark);
+    font-family: "Cinzel Decorative";
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 0.32px;
+}
+.box{
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 30px 20px;
+}
+.box-infos{
+    border: 1px solid var(--coral);
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted  rgba(53, 68, 109, 0.466);
+    color: var(--navy);
+    font-size: 1.1em;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.info .campo{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.info i{
+    font-size: 1.1em;
+    color: var(--blue-primary);
+}
+
+.box-rebate{
+    border: 1px solid var(--green);
+    align-items: center;
+    text-align: center;
+    color: var(--navy);
+    gap: 10px;
+}
+.box-rebate span{
+    background-color: var(--blue-dark);
+    color: var(--white);
+    font-weight: 800;
+    padding: 5px;
+    border-radius: 5px;
+    width: 180px;
+}
+
+.final-area{
+    border-top: 1px dotted  rgba(53, 68, 109, 0.466);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.final-area h3{
+    color: var(--blue-dark);
+    text-align: center;
+    font-family: "Cinzel Decorative";
+    font-size: 1.25em;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+.final-area p{
+    color: var(--blue-dark);
+    text-align: center;
+    font-size: 0.90em;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+.btn-area{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.btn-area a{
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 10px 30px;
+    text-align: center;
+}
+.menu{
+    background-color: var(--coral);
+    color: var(--white);
+}
+.index{
+    color: var(--blue-dark);
+    border: 2px solid var(--blue-dark);
+}
+.btn-area a:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.menu:hover{
+    box-shadow: 0 6px 20px rgba(246, 81, 53, 0.4);
+}
+.index:hover{
+    background-color: var(--blue-dark);
+    color: var(--white);
+}
+.btn-area a:hover, .menu:hover, .index:hover, .btn-area a, .menu, .index{
+    transition: 0.2s;
+}
