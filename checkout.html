@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/layout.css">
+    <link rel="stylesheet" href="src/styles/checkout.css">
+    <link rel="shortcut icon" href="src/images/logos/favicon.svg" type="image/x-icon">
+    <title>Salina | Checkout Pagamento</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="src/images/logos/logo.svg" alt="logotipo">
+            </div>
+            <nav class="nav-menu">
+                <ul class="menu-items">
+                    <li class="menu-item"><a href="index.html">Início</a></li>
+                    <li class="menu-item"><a href="menu.html">Cardápio</a></li>
+                </ul>
+            </nav>
+            <button class="cart-btn" data-modal="cart-modal">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+        </div>
+    </header>
+    <dialog id="cart-modal">
+        <div class="header-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h4>Seu carrinho</h4>
+            <button class="close-cart" data-modal="cart-modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="cart-container">
+            <div class="empty-cart">
+                <i class="fa-solid fa-cart-shopping cart-modal"></i>
+                <p class="title">Seu carrinho está vazio</p>
+                <p>Adicione seus pratos favoritos!</p>
+            </div>
+            <div class="product">
+                <img src="src/images/products/camaroes.png" alt="">
+                <div class="data-product">
+                    <p class="tittle">Nome do prato</p>
+                    <span class="price">R$ 90,00</span>
+                    <div class="qtd-area">
+                        <button>
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <span class="qtd-item">1</span>
+                        <button>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-cart">
+            <div class="total">
+                <h3>TOTAL:</h3>
+                <span>R$ 0,00</span>
+            </div>
+            <button>FINALIZAR PEDIDO</button>
+        </div>
+    </dialog>
+    <main>
+            <h1>
+                <img src="src/images/titulos/Checkout.svg" alt="">
+            </h1>
+        <section class="checkout-container">
+            <section class="data-client">
+                <div class="data-card personal">
+                    <h2 class="form-title">Dados Pessoais</h2>
+                    <form>
+                        <div class="input-group nome">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="cpf">CPF</label>
+                            <input type="text" name="cpf" id="cpf" placeholder="xxx.xxx.xxx-xx" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" name="telefone" id="telefone" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" placeholder="(11) 99999-9999" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="data-card address">
+                    <h2 class="form-title">Endereço de Entrega</h2>
+                    <form>
+                        <div class="input-group">
+                            <label for="rua">Rua</label>
+                            <input type="text" name="rua" id="rua" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="numero">Número</label>
+                            <input type="number" name="numero" id="numero" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" name="complemento" id="complemento">
+                        </div>
+                        <div class="input-group">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" name="bairro" id="bairro">
+                        </div>
+                        <div class="input-group">
+                            <label for="cidade">Cidade</label>
+                            <select name="cidade" id="cidade">
+                                <option>Selecione a cidade</option>
+                                <option value="Cotia">Cotia</option>
+                                <option value="Itapevi">Itapevi</option>
+                                <option value="VGP">Vargem Grande Paulista</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="cep">CEP</label>
+                            <input type="number" name="cep" id="cep" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="data-card payment">
+                    <h2 class="form-title">Forma de Pagamento</h2>
+                    <form>
+                        <fieldset>
+                            <legend>Na entrega</legend>
+                            <label class="option">
+                                <input type="radio" id="cartao" name="forma-pagamento" value="cartao">Cartão
+                            </label>
+                            <label class="option">
+                                <input type="radio"  id="dinheiro" name="forma-pagamento" value="dinheiro">Dinheiro
+                            </label>
+                            <label class="option">
+                                <input type="radio"  id="pix" name="forma-pagamento" value="pix">Pix
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Online</legend>
+                            <label class="option">
+                                <input type="radio"  id="pix" name="forma-pagamento" value="pix">Pix
+                            </label>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+            <section class="summary">
+                <div class="summary-container">
+                    <h3>Resumo do Pedido</h3>
+                    <div class="products summary-products">
+                        <div class="product summary-product">
+                            <img src="src/images/products/camaroes.png" alt="">
+                            <div class="data-product">
+                                <p class="tittle">Nome do prato</p>
+                                <span class="price">R$ 90,00</span>
+                                    <span class="qtd-item">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc">
+                        <div class="sub">
+                            <p>Subtotal</p>
+                            <span>R$ 90,00</span>
+                        </div>
+                        <div class="frete">
+                            <p>Frete</p>
+                            <span>R$ 0,00</span>
+                        </div>
+                    </div>
+                    <div class="footer-summary">
+                        <div class="total">
+                            <h4>TOTAL:</h4>
+                            <span>R$ 90,00</span>
+                        </div>
+                        <button>Realizar pagamento</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="src/images/logos/logo-footer.svg" alt="logotipo">
+            </div>
+            <div class="footer-contact">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <span>(11) 92345-6789</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span>Estrada das Ostras, 90</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <span>contato@salina.com.br</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <hr>
+            <p>© 2026 Restaurante Salina | Desenvolvido por: Maria Eduarda Aurélio e Rafaela Campos</p>
+        </div>
+    </footer>
+    <script src="src/javascript/script.js"></script>
+    <script src="src/javascript/cart.js"></script>
+</body>
+</html>
