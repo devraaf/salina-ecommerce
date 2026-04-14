@@ -101,5 +101,4 @@ function configurarBusca(dados) {
     });
 }
 
-// Iniciar quando a página carregar
 document.addEventListener('DOMContentLoaded', carregarDados);
