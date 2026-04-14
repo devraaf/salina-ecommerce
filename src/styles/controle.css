@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cinzel Decorative";
+    background-color: #fdf5e6;
+    /* padding removido daqui */
+    min-height: 100vh;
+}
+
+.hero-adm {
+    font-family: "Cinzel Decorative", serif;
+    margin-bottom: 30px;
+    margin-top: 200px;
+    margin-left: 40px;  /* adicionado */
+    padding: 15px 20px;
+    display: inline-block;
+}
+
+.hero-adm h1 {
+    color: #1e3a8a;
+    font-family: "Cinzel Decorative";
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.hero-adm p {
+    color: #1e3a8a;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    display: block;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1400px;
+    margin-bottom: 200px;
+    margin-left: 40px;  
+    margin-right: 40px;
+    border-radius: 20px;
+}
+
+/* resto do CSS permanece igual */
+.panel {
+    flex: 1;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    min-height: 500px;
+    box-shadow: 0 10px 40px 0 rgba(19, 49, 157, 0.08);
+}
+
+.panel-header {
+    margin-bottom: 15px;
+}
+
+.panel-header h2 {
+    color: #1e3a8a;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Cinzel Decorative";
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.search-box {
+    padding: 6px 10px;
+    width: 180px;
+    font-size: 11px;
+    color: #333;
+    background-color: white;
+    outline: none;
+    border-radius: 5px;
+}
+
+.search-box::placeholder {
+    color: #999;
+}
+
+.search-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.search-wrapper i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 12px;
+}
+
+.search-wrapper .search-box {
+    padding-left: 30px; /* espaço para o ícone */
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.data-table thead {
+    background-color: #d1d5db;
+}
+
+.data-table th {
+    padding: 10px 8px;
+    text-align: left;
+    color: #1e3a8a;
+    font-weight: normal;
+}
+
+.data-table td {
+    padding: 12px 8px;
+    color: #333;
+}
+
+.data-table tbody tr {
+    background-color: #f3f4f6;
+}
+
+.status-badge {
+    background-color: #86efac;
+    color: #166534;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.status-pendente {
+    background-color: #fca5a5;
+    color: #991b1b;
+}
+
+.client-avatar {
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.client-name {
+    display: inline-flex;
+    align-items: center;
+}
+
+.empty-row td {
+    height: 40px;
+    background-color: #f9fafb;
+}
+
+.gray-area {
+    background-color: #d1d5db;
+    height: 250px;
+    margin-top: 0;
+    
+}
+
+/* RODAPÉ */
+footer {
+    border-top: 7px solid var(--coral);
+    background-color: var(--navy);
+    padding: 2em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    color: var(--cream);
+    margin: 0 50px;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+.contact-item {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.contact-icon {
+    background-color: var(--cream);
+    color: var(--navy);
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.footer-bottom {
+    text-align: center;
+    opacity: 0.6;
+    color: var(--white);
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.footer-bottom p {
+    padding: 20px;
+}
