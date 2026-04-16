@@ -39,6 +39,7 @@
       "cliente": "Ana Silva",
       "data": "07/01/2026",
       "pagamento": "Pago",
+      "status": "concluido",
       "total": 250.00
     },
     {
@@ -46,6 +47,7 @@
       "cliente": "Carlos Santos",
       "data": "26/11/2026",
       "pagamento": "Pendente",
+      "status": "pendente",
       "total": 180.00
     },
     {
@@ -53,14 +55,41 @@
       "cliente": "Ana Silva",
       "data": "22/03/2026",
       "pagamento": "Pago",
+      "status": "extornado",
       "total": 300.00
     },
     {
       "id": "#11359",
       "cliente": "João Costa",
       "data": "08/01/2026",
-      "pagamento": "extornado",
+      "pagamento": "Pago",
+      "status":"pago",
       "total": 89.90
+    },
+    {
+      "id": "PED006",
+      "cliente": "Fernanda Lima",
+      "data": "14/04/2026",
+      "total": 320.00,
+      "pagamento": "Pago",
+      "status": "concluido"
+    },
+    {
+      "id": "PED007",
+      "cliente": "Roberto Almeida",
+      "data": "13/04/2026",
+      "total": 200.00,
+      "pagamento": "Pago",
+      "status": "concluido"
+    },
+    {
+      "id": "PED008",
+      "cliente": "Juliana Costa",
+      "data": "12/04/2026",
+      "total": 178.00,
+      "pagamento": "Pago",
+      "status": "extornado",
+      "dataExtorno": "14/04/2026"
     }
   ]
 }

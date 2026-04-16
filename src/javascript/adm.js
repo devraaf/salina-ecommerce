@@ -6,9 +6,8 @@ async function carregarDados() {
         
         renderizarPedidos(dados.pedidos);
         renderizarClientes(dados.clientes);
-        
-        // Configurar busca
         configurarBusca(dados);
+        
     } catch (erro) {
         console.error('Erro ao carregar dados:', erro);
     }
@@ -22,36 +21,74 @@ function renderizarPedidos(pedidos) {
     pedidos.forEach(pedido => {
         const tr = document.createElement('tr');
         
-        const statusClass = pedido.pagamento === 'Pago' ? 'status-pago' : 'status-pendente';
+        // Verifica se está extornado
+        const isExtornado = pedido.status === 'extornado';
+        
+        // Define classes e valores visuais
+        const statusClass = isExtornado ? 'status-extornado' : 
+                           (pedido.pagamento === 'Pago' ? 'status-pago' : 'status-pendente');
+        const statusTexto = isExtornado ? '↩ Extornado' : pedido.pagamento;
+        
+        // Valor riscado se extornado
+        const valorHTML = isExtornado 
+            ? `<span class="valor-riscado">R$ ${pedido.total.toFixed(2).replace('.', ',')}</span>`
+            : `R$ ${pedido.total.toFixed(2).replace('.', ',')}`;
+        
+        // Botão de extornar só aparece se estiver PAGO e não extornado
+        const btnExtornar = (pedido.pagamento === 'Pago' && !isExtornado) 
+            ? `<button class="btn-extornar" onclick="extornarPedido('${pedido.id}')" title="Extornar pedido">↩ Extornar</button>`
+            : '';
         
         tr.innerHTML = `
             <td>${pedido.id}</td>
             <td>${pedido.cliente}</td>
             <td>${pedido.data}</td>
-            <td><span class="status-badge ${statusClass}">${pedido.pagamento}</span></td>
-            <td>R$ ${pedido.total.toFixed(2).replace('.', ',')}</td>
+            <td><span class="status-badge ${statusClass}">${statusTexto}</span></td>
+            <td>${valorHTML}</td>
+            <td class="acoes">
+                
+                ${btnExtornar}
+            </td>
         `;
+        
+        // Adiciona classe especial na linha se extornado
+        if (isExtornado) {
+            tr.classList.add('pedido-extornado');
+        }
         
         tbody.appendChild(tr);
     });
     
-    // Adicionar linhas vazias se necessário
-    for (let i = pedidos.length; i < 3; i++) {
-        const tr = document.createElement('tr');
-        tr.className = 'empty-row';
-        tr.innerHTML = '<td colspan="5"></td>';
-        tbody.appendChild(tr);
-    }
 }
 
-// Renderizar clientes na tabela
+// Extornar pedido
+function extornarPedido(id) {
+    if (!confirm('Tem certeza que deseja extornar este pedido?')) {
+        return;
+    }
+    fetch('src/data/dados.json')
+        .then(res => res.json())
+        .then(dados => {
+            const pedido = dados.pedidos.find(p => p.id === id);
+            
+            if (!pedido || pedido.status === 'extornado') {
+                alert('Pedido já extornado ou não encontrado!');
+                return;
+            }
+            alert(`Pedido ${id} extornado com sucesso!`);
+            carregarDados(); // Recarrega a tabela
+        });
+}
+
+
+
+// Renderizar clientes
 function renderizarClientes(clientes) {
     const tbody = document.getElementById('tabelaClientes');
     tbody.innerHTML = '';
     
     clientes.forEach(cliente => {
         const tr = document.createElement('tr');
-        
         tr.innerHTML = `
             <td>
                 <div class="client-name">
@@ -63,42 +100,33 @@ function renderizarClientes(clientes) {
             <td>${cliente.totalPedidos}</td>
             <td>R$ ${cliente.totalGasto.toFixed(2).replace('.', ',')}</td>
         `;
-        
         tbody.appendChild(tr);
     });
-    
-    // Adicionar linhas vazias se necessário
-    for (let i = clientes.length; i < 2; i++) {
-        const tr = document.createElement('tr');
-        tr.className = 'empty-row';
-        tr.innerHTML = '<td colspan="4"></td>';
-        tbody.appendChild(tr);
-    }
 }
 
-// Configurar função de busca
+
+function filtrar(array, termo, campos) {
+    const busca = termo.toLowerCase();
+    return array.filter(item => 
+        campos.some(campo => {
+            const valor = item[campo];
+            return valor && valor.toString().toLowerCase().includes(busca);
+        })
+    );
+}
 function configurarBusca(dados) {
-    const inputPedidos = document.getElementById('buscaPedidos');
-    const inputClientes = document.getElementById('buscaClientes');
-    
-    inputPedidos.addEventListener('input', (e) => {
-        const termo = e.target.value.toLowerCase();
-        const pedidosFiltrados = dados.pedidos.filter(p => 
-            p.id.toLowerCase().includes(termo) ||
-            p.cliente.toLowerCase().includes(termo) ||
-            p.data.includes(termo)
-        );
-        renderizarPedidos(pedidosFiltrados);
+    // Busca de pedidos
+    document.getElementById('buscaPedidos').addEventListener('input', (e) => {
+        const filtrados = filtrar(dados.pedidos, e.target.value, ['id', 'cliente', 'data']);
+        renderizarPedidos(filtrados);
     });
-    
-    inputClientes.addEventListener('input', (e) => {
-        const termo = e.target.value.toLowerCase();
-        const clientesFiltrados = dados.clientes.filter(c => 
-            c.nome.toLowerCase().includes(termo) ||
-            c.email.toLowerCase().includes(termo)
-        );
-        renderizarClientes(clientesFiltrados);
+
+    // Busca de clientes
+    document.getElementById('buscaClientes').addEventListener('input', (e) => {
+        const filtrados = filtrar(dados.clientes, e.target.value, ['nome', 'email']);
+        renderizarClientes(filtrados);
     });
 }
+
 
 document.addEventListener('DOMContentLoaded', carregarDados);

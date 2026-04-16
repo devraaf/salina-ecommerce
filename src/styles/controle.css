@@ -134,20 +134,174 @@ body {
     background-color: #f3f4f6;
 }
 
+/* Status badges */
+/* Status badges */
 .status-badge {
-    background-color: #86efac;
-    color: #166534;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 500;
-    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .status-pendente {
-    background-color: #fca5a5;
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-pago {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status-extornado {
+    background: #fee2e2;
     color: #991b1b;
 }
+
+/* Pedido extornado */
+.pedido-extornado {
+    opacity: 0.6;
+    background: #f9fafb;
+}
+
+.pedido-extornado td {
+    color: #9ca3af;
+}
+
+.pedido-extornado .status-badge {
+    opacity: 1;
+}
+
+/* Valor riscado */
+.valor-riscado {
+    text-decoration: line-through;
+    color: #9ca3af;
+    font-style: italic;
+}
+
+/* Botões */
+.acoes {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-detalhes {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #e5e7eb;
+    color: #374151;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-detalhes:hover {
+    background: #d1d5db;
+}
+
+.btn-extornar {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    background: #ef4444;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-extornar:hover {
+    background: #dc2626;
+    transform: translateY(-1px);
+}
+
+/* Valor riscado */
+.valor-riscado {
+    text-decoration: line-through;
+    color: #9ca3af;
+    font-style: italic;
+}
+
+/* Botões de ação */
+.acoes {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-icon {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn-extornar { 
+    background: #fecaca; 
+    color: #991b1b;
+}
+.btn-extornar:hover { 
+    background: #ef4444; 
+    color: white;
+    transform: scale(1.1);
+}
+/* Badge extornado */
+.badge-extornado {
+    font-size: 11px;
+    color: #ef4444;
+    font-weight: 600;
+    padding: 4px 8px;
+    background: #fee2e2;
+    border-radius: 4px;
+}
+
+
+/* Animação */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+
+.filtros-status {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filtro-status {
+    padding: 8px 16px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.filtro-status.ativo,
+.filtro-status:hover {
+    background: #111827;
+    color: white;
+    border-color: #111827;
+}
+
+.filtro-status[data-status="extornado"]:hover,
+.filtro-status[data-status="extornado"].ativo {
+    background: #ef4444;
+    border-color: #ef4444;
+}
+
 
 .client-avatar {
     width: 24px;
