@@ -54,6 +54,13 @@
       "data": "22/03/2026",
       "pagamento": "Pago",
       "total": 300.00
+    },
+    {
+      "id": "#11359",
+      "cliente": "João Costa",
+      "data": "08/01/2026",
+      "pagamento": "extornado",
+      "total": 89.90
     }
   ]
 }
