@@ -9,17 +9,16 @@
 body {
     font-family: "Cinzel Decorative";
     background-color: #fdf5e6;
-    /* padding removido daqui */
     min-height: 100vh;
 }
 
+/* hero */
 .hero-adm {
     font-family: "Cinzel Decorative", serif;
     margin-bottom: 30px;
     margin-top: 200px;
-    margin-left: 40px;  /* adicionado */
+    margin-left: 40px;
     padding: 15px 20px;
-    display: inline-block;
 }
 
 .hero-adm h1 {
@@ -42,19 +41,17 @@ body {
     display: block;
 }
 
+/* container principal*/
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     max-width: 1400px;
-    margin-bottom: 200px;
-    margin-left: 40px;  
-    margin-right: 40px;
-    border-radius: 20px;
+    margin: 0 40px 200px;
 }
 
-/* resto do CSS permanece igual */
+/* paineis */
 .panel {
-    flex: 1;
     background-color: white;
     border-radius: 20px;
     padding: 20px;
@@ -76,8 +73,23 @@ body {
     margin-bottom: 10px;
 }
 
+/* barra de pesquisa */
+.search-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.search-wrapper i {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 12px;
+}
+
 .search-box {
-    padding: 6px 10px;
+    padding: 6px 10px 6px 30px;
     width: 180px;
     font-size: 11px;
     color: #333;
@@ -90,24 +102,7 @@ body {
     color: #999;
 }
 
-.search-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-.search-wrapper i {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #999;
-    font-size: 12px;
-}
-
-.search-wrapper .search-box {
-    padding-left: 30px; /* espaço para o ícone */
-}
-
+/* tabela de dados */
 .data-table {
     width: 100%;
     border-collapse: collapse;
@@ -134,8 +129,7 @@ body {
     background-color: #f3f4f6;
 }
 
-/* Status badges */
-/* Status badges */
+/* status de pagamento*/
 .status-badge {
     padding: 6px 12px;
     border-radius: 20px;
@@ -161,7 +155,7 @@ body {
     color: #991b1b;
 }
 
-/* Pedido extornado */
+/* estilo dos pedidos extornados */
 .pedido-extornado {
     opacity: 0.6;
     background: #f9fafb;
@@ -175,33 +169,12 @@ body {
     opacity: 1;
 }
 
-/* Valor riscado */
 .valor-riscado {
     text-decoration: line-through;
     color: #9ca3af;
     font-style: italic;
 }
-
-/* Botões */
-.acoes {
-    display: flex;
-    gap: 8px;
-}
-
-.btn-detalhes {
-    padding: 6px 12px;
-    border: none;
-    border-radius: 6px;
-    background: #e5e7eb;
-    color: #374151;
-    cursor: pointer;
-    font-size: 12px;
-}
-
-.btn-detalhes:hover {
-    background: #d1d5db;
-}
-
+/*botão de extornar*/
 .btn-extornar {
     padding: 5px 10px;
     border: none;
@@ -218,44 +191,7 @@ body {
     transform: translateY(-1px);
 }
 
-/* Valor riscado */
-.valor-riscado {
-    text-decoration: line-through;
-    color: #9ca3af;
-    font-style: italic;
-}
-
-/* Botões de ação */
-.acoes {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-}
-
-.btn-icon {
-    width: 32px;
-    height: 32px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.btn-extornar { 
-    background: #fecaca; 
-    color: #991b1b;
-}
-.btn-extornar:hover { 
-    background: #ef4444; 
-    color: white;
-    transform: scale(1.1);
-}
-/* Badge extornado */
+/* status de valor extornado */
 .badge-extornado {
     font-size: 11px;
     color: #ef4444;
@@ -265,14 +201,13 @@ body {
     border-radius: 4px;
 }
 
-
-/* Animação */
+/* ANIMAÇÃO */
 @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.7; }
 }
 
-
+/* status de pagamento */
 .filtros-status {
     display: flex;
     gap: 10px;
@@ -302,7 +237,7 @@ body {
     border-color: #ef4444;
 }
 
-
+/* avatar do cliente */
 .client-avatar {
     width: 24px;
     height: 24px;
@@ -322,6 +257,7 @@ body {
     align-items: center;
 }
 
+
 .empty-row td {
     height: 40px;
     background-color: #f9fafb;
@@ -331,5 +267,4 @@ body {
     background-color: #d1d5db;
     height: 250px;
     margin-top: 0;
-    
 }
