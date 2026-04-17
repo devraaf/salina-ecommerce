@@ -186,6 +186,13 @@ dialog::backdrop {
     transition: 0.2s ease-in-out;
 }
 
+/* ESTILOS PADRÃO MASKS */
+.mask{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--blue-primary);
+}
+
 /* RODAPÉ */
 footer{
     border-top: 7px solid var(--coral);

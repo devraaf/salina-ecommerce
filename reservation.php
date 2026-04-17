@@ -18,7 +18,7 @@
     <title>Salina | Reserva</title>
 </head>
 <body>
-    <main>
+    <main class="mask">
         <section class="status">
             <span class="flag">Você economizou 30% reservando online!</span>
             <div class="status-container">

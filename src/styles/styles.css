@@ -63,7 +63,6 @@ main{
     transition: 0.2s;
 }
 .features{
-    background-color: var(--blue-dark);
     background-image: url('../images/masks/mask-features.svg');
     height: 250px;
     align-content: center;
