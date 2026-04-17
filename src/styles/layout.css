@@ -83,6 +83,7 @@ dialog::backdrop {
 }
 .empty-cart{
     text-align: center;
+    display: none;
 }
 .empty-cart i{
     font-size: 80px;
